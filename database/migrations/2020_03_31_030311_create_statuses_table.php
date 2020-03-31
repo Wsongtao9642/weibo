@@ -6,15 +6,10 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateStatusesTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('statuses', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->text('content');
             $table->integer('user_id')->index();
             $table->index(['created_at']);
@@ -22,11 +17,6 @@ class CreateStatusesTable extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('statuses');

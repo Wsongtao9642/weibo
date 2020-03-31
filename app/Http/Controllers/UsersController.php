@@ -30,7 +30,7 @@ class UsersController extends Controller
         return view('users.create');
     }
 
-    public function show(User $user)
+     public function show(User $user)
     {
         $statuses = $user->statuses()
                            ->orderBy('created_at', 'desc')

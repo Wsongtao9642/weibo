@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use Auth;
+use Mail;
 class SessionsController extends Controller
 {
     public function __construct()
